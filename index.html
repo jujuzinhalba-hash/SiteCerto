@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WebForge — Sites para Empresas</title>
+    <title>SiteCerto — Sites para Empresas</title>
 
     <style>
         * {
@@ -24,8 +23,6 @@
             color: white;
         }
 
-        /* MENU */
-
         header {
             width: 100%;
             padding: 22px 8%;
@@ -35,7 +32,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(10, 10, 10, 0.92);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid #222;
@@ -53,15 +50,13 @@
         nav a {
             color: #ccc;
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 25px;
             transition: 0.3s;
         }
 
         nav a:hover {
             color: #6c63ff;
         }
-
-        /* HERO */
 
         .hero {
             min-height: 100vh;
@@ -108,6 +103,7 @@
             font-weight: bold;
             margin: 6px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -130,8 +126,6 @@
             color: #6c63ff;
         }
 
-        /* CATEGORIAS */
-
         section {
             padding: 90px 8%;
         }
@@ -150,6 +144,8 @@
             color: #999;
         }
 
+        /* CATEGORIAS */
+
         .categories {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -165,6 +161,9 @@
             text-align: center;
             border-radius: 12px;
             transition: 0.3s;
+            text-decoration: none;
+            color: white;
+            display: block;
         }
 
         .category:hover {
@@ -228,9 +227,19 @@
         }
 
         .model-link {
-            color: #6c63ff;
+            display: inline-block;
+            color: white;
+            background: #6c63ff;
+            padding: 11px 17px;
+            border-radius: 7px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .model-link:hover {
+            background: #7d75ff;
+            transform: translateY(-2px);
         }
 
         /* COMO FUNCIONA */
@@ -267,7 +276,7 @@
             line-height: 1.5;
         }
 
-        /* CTA */
+        /* CONTATO */
 
         .cta {
             text-align: center;
@@ -286,7 +295,11 @@
             margin-bottom: 30px;
         }
 
-        /* RODAPE */
+        .phone {
+            color: #777 !important;
+            margin-top: 15px;
+            margin-bottom: 0 !important;
+        }
 
         footer {
             padding: 35px 8%;
@@ -295,7 +308,7 @@
             border-top: 1px solid #222;
         }
 
-        /* CELULAR */
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -331,7 +344,10 @@
     <!-- MENU -->
 
     <header>
-        <div class="logo">Web<span>Forge</span></div>
+
+        <div class="logo">
+            Site<span>Certo</span>
+        </div>
 
         <nav>
             <a href="#categorias">Categorias</a>
@@ -339,10 +355,11 @@
             <a href="#processo">Como funciona</a>
             <a href="#contato">Contato</a>
         </nav>
+
     </header>
 
 
-    <!-- HERO -->
+    <!-- INÍCIO -->
 
     <section class="hero">
 
@@ -359,6 +376,7 @@
             </p>
 
             <div class="buttons">
+
                 <a href="#modelos" class="btn btn-primary">
                     Ver modelos
                 </a>
@@ -366,6 +384,7 @@
                 <a href="#contato" class="btn btn-secondary">
                     Quero meu site
                 </a>
+
             </div>
 
         </div>
@@ -387,37 +406,38 @@
 
         </div>
 
+
         <div class="categories">
 
-            <div class="category">
+            <a href="#barbearia" class="category">
                 <div class="icon">💈</div>
                 <h3>Barbearias</h3>
-            </div>
+            </a>
 
-            <div class="category">
+            <a href="#confeitaria" class="category">
                 <div class="icon">🍰</div>
                 <h3>Confeitarias</h3>
-            </div>
+            </a>
 
-            <div class="category">
+            <a href="#restaurante" class="category">
                 <div class="icon">🍕</div>
                 <h3>Restaurantes</h3>
-            </div>
+            </a>
 
-            <div class="category">
+            <a href="#academia" class="category">
                 <div class="icon">🏋️</div>
                 <h3>Academias</h3>
-            </div>
+            </a>
 
-            <div class="category">
+            <a href="#oficina" class="category">
                 <div class="icon">🚗</div>
                 <h3>Oficinas</h3>
-            </div>
+            </a>
 
-            <div class="category">
+            <a href="#petshop" class="category">
                 <div class="icon">🐶</div>
                 <h3>Pet Shops</h3>
-            </div>
+            </a>
 
         </div>
 
@@ -438,9 +458,13 @@
 
         </div>
 
+
         <div class="models">
 
-            <div class="model">
+
+            <!-- BARBEARIA -->
+
+            <div class="model" id="barbearia">
 
                 <div class="model-preview">
                     💈
@@ -455,7 +479,8 @@
                         com serviços, preços e agendamento.
                     </p>
 
-                    <a href="#" class="model-link">
+                    <a href="#demonstracao-barbearia"
+                       class="model-link">
                         Ver demonstração →
                     </a>
 
@@ -464,7 +489,9 @@
             </div>
 
 
-            <div class="model">
+            <!-- CONFEITARIA -->
+
+            <div class="model" id="confeitaria">
 
                 <div class="model-preview">
                     🍰
@@ -479,7 +506,8 @@
                         seus doces, bolos e produtos.
                     </p>
 
-                    <a href="#" class="model-link">
+                    <a href="#demonstracao-confeitaria"
+                       class="model-link">
                         Ver demonstração →
                     </a>
 
@@ -488,7 +516,9 @@
             </div>
 
 
-            <div class="model">
+            <!-- RESTAURANTE -->
+
+            <div class="model" id="restaurante">
 
                 <div class="model-preview">
                     🍕
@@ -503,7 +533,89 @@
                         localização e contato.
                     </p>
 
-                    <a href="#" class="model-link">
+                    <a href="#demonstracao-restaurante"
+                       class="model-link">
+                        Ver demonstração →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMIA -->
+
+            <div class="model" id="academia">
+
+                <div class="model-preview">
+                    🏋️
+                </div>
+
+                <div class="model-info">
+
+                    <h3>Academia</h3>
+
+                    <p>
+                        Um site moderno para apresentar
+                        planos, horários e serviços.
+                    </p>
+
+                    <a href="#demonstracao-academia"
+                       class="model-link">
+                        Ver demonstração →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- OFICINA -->
+
+            <div class="model" id="oficina">
+
+                <div class="model-preview">
+                    🚗
+                </div>
+
+                <div class="model-info">
+
+                    <h3>Oficina</h3>
+
+                    <p>
+                        Apresente seus serviços,
+                        localização e formas de contato.
+                    </p>
+
+                    <a href="#demonstracao-oficina"
+                       class="model-link">
+                        Ver demonstração →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PET SHOP -->
+
+            <div class="model" id="petshop">
+
+                <div class="model-preview">
+                    🐶
+                </div>
+
+                <div class="model-info">
+
+                    <h3>Pet Shop</h3>
+
+                    <p>
+                        Mostre seus produtos, serviços
+                        e cuidados para animais.
+                    </p>
+
+                    <a href="#demonstracao-petshop"
+                       class="model-link">
                         Ver demonstração →
                     </a>
 
@@ -516,7 +628,141 @@
     </section>
 
 
-    <!-- PROCESSO -->
+    <!-- DEMONSTRAÇÕES -->
+
+    <section id="demonstracao-barbearia">
+
+        <div class="section-title">
+
+            <h2>💈 Demonstração — Barbearia Premium</h2>
+
+            <p>
+                Um exemplo de como podemos criar o site
+                de uma barbearia.
+            </p>
+
+        </div>
+
+        <div style="text-align:center;">
+            <a href="#contato" class="btn btn-primary">
+                Quero esse site
+            </a>
+        </div>
+
+    </section>
+
+
+    <section id="demonstracao-confeitaria">
+
+        <div class="section-title">
+
+            <h2>🍰 Demonstração — Confeitaria</h2>
+
+            <p>
+                Um exemplo de site para apresentar
+                bolos, doces e produtos.
+            </p>
+
+        </div>
+
+        <div style="text-align:center;">
+            <a href="#contato" class="btn btn-primary">
+                Quero esse site
+            </a>
+        </div>
+
+    </section>
+
+
+    <section id="demonstracao-restaurante">
+
+        <div class="section-title">
+
+            <h2>🍕 Demonstração — Restaurante</h2>
+
+            <p>
+                Um exemplo de site com cardápio,
+                informações e contato.
+            </p>
+
+        </div>
+
+        <div style="text-align:center;">
+            <a href="#contato" class="btn btn-primary">
+                Quero esse site
+            </a>
+        </div>
+
+    </section>
+
+
+    <section id="demonstracao-academia">
+
+        <div class="section-title">
+
+            <h2>🏋️ Demonstração — Academia</h2>
+
+            <p>
+                Um exemplo de site para apresentar
+                planos e serviços.
+            </p>
+
+        </div>
+
+        <div style="text-align:center;">
+            <a href="#contato" class="btn btn-primary">
+                Quero esse site
+            </a>
+        </div>
+
+    </section>
+
+
+    <section id="demonstracao-oficina">
+
+        <div class="section-title">
+
+            <h2>🚗 Demonstração — Oficina</h2>
+
+            <p>
+                Um exemplo de site para uma oficina
+                apresentar seus serviços.
+            </p>
+
+        </div>
+
+        <div style="text-align:center;">
+            <a href="#contato" class="btn btn-primary">
+                Quero esse site
+            </a>
+        </div>
+
+    </section>
+
+
+    <section id="demonstracao-petshop">
+
+        <div class="section-title">
+
+            <h2>🐶 Demonstração — Pet Shop</h2>
+
+            <p>
+                Um exemplo de site para pet shops
+                divulgarem seus serviços.
+            </p>
+
+        </div>
+
+        <div style="text-align:center;">
+            <a href="#contato" class="btn btn-primary">
+                Quero esse site
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- COMO FUNCIONA -->
 
     <section id="processo">
 
@@ -529,6 +775,7 @@
             </p>
 
         </div>
+
 
         <div class="steps">
 
@@ -585,7 +832,8 @@
         <h2>Pronto para começar?</h2>
 
         <p>
-            Vamos criar um site para o seu negócio.
+            Entre em contato e vamos criar
+            o site do seu negócio.
         </p>
 
         <a href="https://wa.me/5511978552458"
@@ -594,19 +842,22 @@
             Entrar em contato
         </a>
 
+        <p class="phone">
+            WhatsApp: (11) 97855-2458
+        </p>
+
     </section>
 
 
-    <!-- RODAPE -->
+    <!-- RODAPÉ -->
 
     <footer>
 
         <p>
-            © 2026 WebForge. Todos os direitos reservados.
+            © 2026 SiteCerto. Todos os direitos reservados.
         </p>
 
     </footer>
 
 </body>
 </html>
-```
